@@ -5,9 +5,7 @@ import android.widget.ListView;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+
 
 import java.util.ArrayList;
 
@@ -18,6 +16,16 @@ public class MainActivity extends AppCompatActivity {
             "Benito Peralta","Juan Jaramillo",
             "Christian Steps","Alexa Giraldo",
             "Linda Murillo","Lizeth Astrada"};
+    String [] cargo={"CEO","Asistente",
+            "Directora de Marketing", "Diseñadora de Producto",
+            "Supervisor de Ventas","CEO",
+            "CEO","Lead Programmer",
+            "Directora de Marketing","CEO"};
+    String [] compañia={"Insures S,O","Hospital Blue",
+            "Electrical Parts Itd", "Creativa App",
+            "Neumaticos Press","Banco Nacional",
+            "Cooperativa Verde","Frutisofy",
+            "Seguros Boliver","Concesionario Motolox"};
     ListView lvstEmpleado;
     Integer[]Imgempleado={
 
@@ -37,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        AdaptadorEmpleado adaptador = new AdaptadorEmpleado(this, empleado, Imgempleado);
+        AdaptadorEmpleado adaptador = new AdaptadorEmpleado(this, empleado,cargo,compañia ,Imgempleado);
         lvstEmpleado = findViewById(R.id.lstEmpleado);
         lvstEmpleado.setAdapter (adaptador);
     }

@@ -22,6 +22,18 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtcargo"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/txtcompañia"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="TextView" />
     </LinearLayout>
 
 </LinearLayout>
