@@ -11,7 +11,7 @@ public class AdaptadorEmpleado extends ArrayAdapter<String> {
     String []empleado;
     Integer [] Imgempleado;
     ImageView imgfoto;
-    TextView tvNombreE;
+    TextView tvNombre;
 
     public AdaptadorEmpleado(Activity contexto, String[]empleado,Integer[] Imgempleado) {
         super(contexto, R.layout.empleado, empleado);
@@ -23,10 +23,10 @@ public class AdaptadorEmpleado extends ArrayAdapter<String> {
 
     public View getView(int posicion, View v, ViewGroup parent) {
         LayoutInflater inflater = contexto.getLayoutInflater();
-        View rowView = inflater.inflate(R.layout.paises, null, true);
-        tvNombre = rowView.findViewById(R.id.tvNombrePais);
-        imgBande = rowView.findViewById(R.id.imgvBandera);
-        tvNombre.setText(paises[posicion]);
-        imgBande.setImageResource(ImgPais[posicion]);
+        View rowView = inflater.inflate(R.layout.empleado, null, true);
+        tvNombre = rowView.findViewById(R.id.txNombre);
+        imgfoto = rowView.findViewById(R.id.imgvempleado);
+        tvNombre.setText(empleado[posicion]);
+        imgfoto.setImageResource(Imgempleado[posicion]);
         return rowView;
     }}
